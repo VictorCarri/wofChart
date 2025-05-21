@@ -37,6 +37,22 @@ export class ChartBaseComponent implements OnInit {
         }
         this.createChart(this.labeldata, this.realdata, this.colordata);*/
 	console.log(this.chartInfo);
+	let spinLabels = ["C", "M in Game", "First A in AMERICA'S", "I in AMERICA'S", "G", "I in WIN", "E in America's", "M in AMERICA'S", "P", "R", "Second A in AMERICA'S", "E in GAME", "S in SPIN", "W", "N in SPIN", "Ampersand", "Triple star", "N in WIN", "Single star", "Apostrophe", "S in AMERICA'S", "I in SPIN", "Double star"];
+	let spinDataLabels = Object.keys(this.chartInfo);
+	console.log("Spin data labels: %o", spinDataLabels);
+	var colourData = ["#800080", "#E4A0F7", "#8F00FF"];
+
+	for (let i = 0; i < 7; i++)
+	{
+		colourData.push("#80080");
+		colourData.push("#E4A0F7");
+		colourData.push("#8F00FF");
+	}
+
+	console.log("Colour data: %o", colourData);
+	let realData = Object.values(this.chartInfo);
+	console.log("Real data: %o", realData);
+	this.createChart(spinDataLabels, realData, colourData);
       }
     });
   }

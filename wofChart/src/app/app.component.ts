@@ -10,4 +10,4 @@ import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 })
 export class AppComponent {
   title = 'wofChart';
-}
+};

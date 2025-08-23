@@ -1,0 +1,10 @@
+#!/bin/bash
+
+FILE_NAME=toUpload.zip
+
+if [[ -f $FILE_NAME ]]
+then
+	rm $FILE_NAME
+fi
+
+zip $FILE_NAME ./dist/wof-chart/browser/*
